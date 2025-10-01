@@ -1,0 +1,132 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for a better dark mode experience */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.image-upload-box {
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #8e2de2, #4a00e0);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px 0 rgba(142, 45, 226, 0.45);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(142, 45, 226, 0.6);
+}
+
+.btn-secondary {
+    @apply bg-gray-600 hover:bg-gray-500;
+}
+
+.btn-danger {
+    background: linear-gradient(90deg, #e52d27, #b31217);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px 0 rgba(229, 45, 39, 0.45);
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(229, 45, 39, 0.6);
+}
+
+/* --- Image Comparator --- */
+.image-comparator {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: ew-resize;
+}
+
+.image-comparator .comparator-img-before,
+.image-comparator .comparator-img-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.image-comparator .comparator-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.image-comparator .comparator-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transform: translateX(-1.5px);
+  cursor: ew-resize;
+  z-index: 10;
+}
+
+.image-comparator .comparator-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Checkerboard Background for Transparency --- */
+.checkerboard-bg {
+    background-image:
+        linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+        linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+        linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.dark .checkerboard-bg {
+    background-image:
+        linear-gradient(45deg, #2C2C2E 25%, transparent 25%),
+        linear-gradient(-45deg, #2C2C2E 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #2C2C2E 75%),
+        linear-gradient(-45deg, transparent 75%, #2C2C2E 75%);
+}
