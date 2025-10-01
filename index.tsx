@@ -3973,30 +3973,8 @@ const WhiskAutoStudio = ({ onBack }: { onBack: () => void }) => {
 const Footer = () => {
   return (
     <footer className="bg-light-surface dark:bg-dark-surface p-6 text-center border-t border-light-border dark:border-dark-border">
-      <div className="mb-4 space-y-2">
-        <p className="font-bold text-light-text dark:text-dark-text uppercase">
-          Hãy mời tôi 1 ly cafe nếu bạn thấy hữu ích
-        </p>
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          MB BANK : 0917939111
-        </p>
-        <div className="flex items-center justify-center gap-2 flex-wrap">
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            Tham gia nhóm để được hỗ trợ miễn phí:
-          </p>
-          <a
-            href="https://zalo.me/g/xxgxqm429"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-1 text-sm font-bold text-white rounded-md btn-primary"
-            aria-label="Tham gia nhóm Zalo"
-          >
-            THAM GIA
-          </a>
-        </div>
-      </div>
       <p className="text-sm text-gray-600 dark:text-gray-400">
-        ©2025 Bản quyền thuộc về Dương Tiến Dũng 📱0917 939 111
+        ©2025 Bản quyền thuộc về nơi không biên giới
       </p>
     </footer>
   );
